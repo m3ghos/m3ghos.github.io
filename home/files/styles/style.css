@@ -1,0 +1,158 @@
+* {
+    margin: auto;
+   
+}
+
+.btn-head a {
+    font-family: "Poetsen One", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    text-decoration-line: none;
+    color: rgb(229, 255, 0);
+    margin-right: 10px;
+    transition: 1s;
+    
+}
+
+header {
+    padding: 20px 20px;
+    background-color: blueviolet;
+}
+
+.ass {
+    padding-right: 60%;
+    
+}
+
+.migho {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
+.migho:hover{
+    color: rgb(173, 255, 237);
+    transition: 1s;
+}
+.btn-head a:hover{
+    color: rgb(119, 108, 12);
+    transition: 1s;
+}
+@media only screen and (min-width: 360px) {
+    .ass {
+        padding-right: 11%;
+    }
+    footer{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 457px) {
+    .ass {
+        padding-right: 29%;
+    }
+}
+
+@media only screen and (min-width: 604px) {
+    .ass {
+        padding-right: 49%;
+    }
+}
+
+body {
+    padding-bottom: 00px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #313030;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.349);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    transition: 2s;
+}
+
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-description {
+    color: #777;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.who span{
+    color: blueviolet;
+    background-color: black;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+.who {
+    color: white;
+    padding-left: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.418);
+    white-space: inherit;
+}
+body button{
+    transition: 1s;
+    background-color: blueviolet;
+    white-space: nowrap;
+    border: 4px solid rgb(133, 69, 194);
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px white;
+}
+body button:hover{
+    color: white;
+    transition: 1s;
+    background-color: rgba(132, 0, 255, 0.623);
+    white-space: nowrap;
+    border: 4px solid rgb(156, 133, 179);
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 20px white;
+}
+#xd{
+    display: none;
+}
+#par{
+    display: none;
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    color: white;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.568);
+}
+#texts{
+    text-align: center;
+    transition: 1s;
+    background-color: rgb(255, 255, 255);
+    white-space: nowrap;
+    border: 4px solid rgb(133, 69, 194);
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px white;
+}
