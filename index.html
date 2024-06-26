@@ -1,67 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2314199198124735"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-2314199198124735">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Migho Ahmed</title>
-    <link rel="stylesheet" href="./files/styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Download youtube videos & audio in high quality, free and no ads !">
+	<meta name="author" content="Shailendra Maurya">
+	<meta name="theme-color" content="white">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="keywords" content="youtube, utube, youtube video, youtube downloader, youtube video download, migho">
+	<link rel="manifest" href="migho.webmanifest">
+
+	<title>migho</title>
+
+	<link rel="icon" type="image/png" href="https://m3ghos.github.io/files/imgs/me2.jpg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico/css/pico.classless.min.css">
+	<link rel="stylesheet" href="https://css.gg/css?=website|loadbar-alt|check|info">
+	<link rel="stylesheet" href="migho.css">
+	<script defer src="js/index.js"></script>
+	<script defer src="js/modal.js"></script>
 </head>
-<script src="/files/script/main.js"></script>
-<header>
-    <div class="btn-head">
-        <a class="ass" href="#home"><span class="migho">migho</span></a>
-        <a href="#who_is_migho?">who is migho?</a>
-        <a href="https://instagram.com/m2ghos">instagram</a>
-        <a href="#about_me">about me</a>
-    </div>
-</header>
 
 <body>
-    <hr>
-    <br><br><br><br>
-    <div class="who" id="who_is_migho?">
-        <h1>who is <span id="ran">migho</span>,</h1><br>
-        <h3>im migho from <span id="ran2">tikrit</span> im a websites and telegram bots <span id="ran3">developer</span>
-            :></h3>
-    </div>
-    <center>
-        <br><br><br><br>
-        <div class="card" id="about_me">
-            <img src="/files/imgs/me2.jpg" alt="my" class="card-img">
-            <div class="card-content">
-                <h2 class="card-title" id="contentname">Migho Ahmed</h2>
-                <p class="card-description">From : Tikrit <br>Age : 23 <br>Programmer With : <br> python - html - css -
-                    js - lua - php</p>
-            </div>
-        </div><br><br>
-        <img id="xd" src="/files/imgs/tokyo.gif">
-        <p id="par">fuck you</p><br>
-        <button id="bt" onclick="xd()">🎈</button>
 
-        <div><br><br><br><br><br><br>
-            <input type="text" id="texts" placeholder="اكتبلي رسالة يحلو :>" name="msg">
-            <br><br>
-            <button onclick="getmessage()">أرسال</button>
-            <br><br><br><br><br><br>
+	<header align="center">
+		<h1><img src="https://m3ghos.github.io/files/imgs/me2.jpg" class="logo">migho</h1>
+	</header>
 
-        </div>
+	<main class="container">
+		<form>
+			
+			<label for="vQuality">Select Video Quality</label>
+			<select id="vQuality">
+				<option value="144">144p</option>
+				<option value="240">240p</option>
+				<option value="360">360p</option>
+				<option value="480">480p</option>
+				<option value="720" selected>720p</option>
+				<option value="1080">1080p</option>
+			</select>
+			
+			<label for="aFormat">Select Audio Quality</label>
+			<select id="aFormat">
+				<option value="best">Best</option>
+				<option value="mp3">MP3</option>
+				<option value="ogg">OGG</option>
+				<option value="wav">WAV</option>
+				<option value="opus">Opus</option>
+			</select>
+			
+			<input type="checkbox" id="isAudioOnly">
+			<label for="isAudioOnly"> Audio Only</label>
+			<br><br>
+			<input type="url" id="url" placeholder="Input URL here" required>
 
-    </center>
+			<button type="submit" class="submitBtn">Download</button>
+
+		</form>
+		<div id="status">
+
+		</div>
+	</main>
+
+
+
+	<footer align="center">
+		<a class="contrast" data-target="about" onClick="toggleModal(event)">
+			About
+		</a>
+		<a class="contrast" data-target="supported-sites" onClick="toggleModal(event)">
+			Supported Sites
+		</a>
+
+		<dialog id="about">
+			<article>
+				<header>About</header>
+				<img width="50%" src="https://m3ghos.github.io/files/imgs/me2.jpg" class="logo" />
+				<br><br>
+				migho is a lightweight media downloader written in HTML, CSS and JS with PicoCSS library.
+				<footer align="center">thinks for you</footer>
+			</article>
+		</dialog>
+
+	</footer>
+	<dialog id="supported-sites">
+		<article>
+			<header>Supported Sites</header>
+			<pre>
+			  <br>
+• youtube videos, shorts & music
+• instagram reels & posts
+• tiktok videos, photos & audio
+• vimeo
+• pinterest videos & stories
+• reddit videos & gifs
+• bilibili.com videos
+• rutube videos
+• soundcloud
+• streamable.com
+• tumblr
+• twitch clips
+• twitter videos & voice
+• vine archive
+• vk video & clips
+
+migho is not affiliated with<br>any services listed above.
+			  </pre>
+		</article>
+	</dialog>
+
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js')
+				.then((registration) => {
+					console.log('Service Worker registered with scope:', registration.scope);
+				})
+				.catch((error) => {
+					console.error('Service Worker registration failed:', error);
+				});
+		}
+	</script>
 
 </body>
-
-<footer>
-    <hr id="line">
-    <center><br>
-        INSTAGRAM : <span id="at2">@</span>M2GHOS <span id="shkh"> - </span> TELEGRAM : <span id="at1">@</span>MIGHODEV
-    </center>
-</footer>
 
 </html>
